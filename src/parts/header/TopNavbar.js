@@ -5,9 +5,9 @@ class TopNavbar extends React.Component {
     componentDidMount() {
 
         $('#top-navbar-toggle').click(function () {
-            $('#top-navbar').slideToggle("fast", function () {
+            $('#top-navbar').slideToggle("fast")
+            $("#top-navbar-toggle").toggleClass('toggle-rotate')
 
-            })
         })
 
     }
