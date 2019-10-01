@@ -1,11 +1,11 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import TopNavbar from "./parts/header/TopNavbar";
+import './App.scss';
 
 function App() {
   return (
     <div className="App">
-
+      <TopNavbar />
     </div>
   );
 }

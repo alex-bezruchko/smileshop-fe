@@ -1,0 +1,31 @@
+#top-navbar,
+#top-navbar a,
+#top-navbar-toggle {
+    background: $brown;
+    color: $white;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+#top-navbar {
+    padding: .8rem;
+    display: none;
+
+    .company-offers {
+        font-family: $font_slab;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        a {
+            padding: .33rem 0rem;
+        }
+    }
+}
+
+#top-navbar-toggle {
+    padding: .67rem 0px;
+}
