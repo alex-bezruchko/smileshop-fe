@@ -1,4 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=Chelsea+Market&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Chelsea+Market|Roboto&display=swap');
 
 @import "./sass/variables.scss";
 @import "./sass/parts/navbar.scss";
+
+ul {
+    list-style: none;
+    padding-left: 0px;
+    margin-left: 0px;
+}
