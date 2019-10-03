@@ -1,11 +1,11 @@
 import React from 'react';
-import TopNavbar from "./parts/header/TopNavbar";
+import Header from "./parts/header/Header";
 import './App.scss';
 
 function App() {
   return (
     <div className="App">
-      <TopNavbar />
+      <Header />
     </div>
   );
 }

@@ -1,14 +1,17 @@
 import React from "react";
+import houseLogo from "./../../../src/img/herb-house.png";
+import searchLogo from "./../../../src/img/search.png";
+import cartLogo from "./../../../src/img/cart.png";
 
 import $ from "jquery";
 class TopNavbar extends React.Component {
 
     componentDidMount() {
         var open = false;
-        $('#top-navbar-toggle').click(function () {
-            $('#top-navbar').slideToggle("fast")
+        $('#bottom-navbar-toggle').click(function () {
+            $('#bottom-navbar').slideToggle("fast")
         })
-        $('.top-navbar-menu-toggle').click(function () {
+        $('.bottom-navbar-menu-toggle').click(function () {
             if (open === false) {
                 document.getElementsByClassName('toggle-span')[1].style.display = 'none';
                 document.getElementsByClassName('toggle-span')[0].style.transform = "rotate(-133.33deg)"
@@ -20,9 +23,9 @@ class TopNavbar extends React.Component {
                 document.getElementsByClassName('toggle-span')[2].style.width = "35px"
                 document.getElementsByClassName('toggle-span')[2].style.marginLeft = "3px"
                 document.getElementsByClassName('toggle-span')[2].style.marginTop = "-20px"
-                document.getElementsByClassName('top-navbar-menu')[0].style.display = "flex";
-                document.getElementsByClassName('top-navbar-menu-toggle')[0].style.paddingLeft = "0px"
-                document.getElementsByClassName('top-navbar-menu-toggle')[0].style.paddingRight = "0px"
+                document.getElementsByClassName('bottom-navbar-menu')[0].style.display = "flex";
+                document.getElementsByClassName('bottom-navbar-menu-toggle')[0].style.paddingLeft = "0px"
+                document.getElementsByClassName('bottom-navbar-menu-toggle')[0].style.paddingRight = "0px"
                 open = true
             } else {
                 document.getElementsByClassName('toggle-span')[1].style.display = 'flex';
@@ -38,10 +41,10 @@ class TopNavbar extends React.Component {
                 document.getElementsByClassName('toggle-span')[2].style.marginLeft = "0px"
                 document.getElementsByClassName('toggle-span')[2].style.marginTop = "0px"
 
-                document.getElementsByClassName('top-navbar-menu')[0].style.display = "none";
+                document.getElementsByClassName('bottom-navbar-menu')[0].style.display = "none";
 
-                document.getElementsByClassName('top-navbar-menu-toggle')[0].style.paddingLeft = "0px"
-                document.getElementsByClassName('top-navbar-menu-toggle')[0].style.paddingRight = "0px"
+                document.getElementsByClassName('bottom-navbar-menu-toggle')[0].style.paddingLeft = "0px"
+                document.getElementsByClassName('bottom-navbar-menu-toggle')[0].style.paddingRight = "0px"
                 open = false
 
             }
@@ -54,28 +57,27 @@ class TopNavbar extends React.Component {
     render() {
         return (
             <>
-                <div id="top-navbar">
-                    <div className="top-navbar-menu-toggle">
-                        <div className="toggle-span"></div>
-                        <div className="toggle-span"></div>
-                        <div className="toggle-span"></div>
+                <div className="bottom-navbar">
+                    <img src={houseLogo} alt="herb house" />
+                    <div className="bottom-navbar-actions">
+                        <div className="bottom-navbar-menu-toggle">
+                            <div className="toggle-span"></div>
+                            <div className="toggle-span"></div>
+                            <div className="toggle-span"></div>
+                        </div>
+                        <div><img src={searchLogo} alt="search icon" /></div>
+                        <div><img src={cartLogo} alt="cart icon" /></div>
                     </div>
-                    <div className="top-navbar-menu">
+
+                    <div className="bottom-navbar-menu">
                         <ul>
-                            <li>About Us</li>
-                            <li>Help</li>
-                            <li>Your Account</li>
-                            <li>Your Basket</li>
+                            <li>Home</li>
+                            <li>Our Shop</li>
+                            <li>Products</li>
+                            <li>Recipes</li>
                         </ul>
                     </div>
-                    <div className="company-offers">
-                        <a href="/">Try our meal boxes</a>
-                        <a href="/">100% organic</a>
-                        <a href="/">Free delivery</a>
-                    </div>
                 </div>
-                <div id="top-navbar-toggle">^</div>
-
             </>
         )
     }

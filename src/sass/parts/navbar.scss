@@ -76,7 +76,7 @@ a {
     }
 }
 
-.top-navbar-logo {
+.bottom-navbar {
     max-width: 100%;
     background-color: $bright_green;
 
@@ -88,4 +88,36 @@ a {
         padding-top: .67rem;
         padding-bottom: .67rem;
     }
+}
+
+.bottom-navbar-actions {
+    display: flex;
+    justify-content: space-evenly;
+
+    img {
+        max-width: 28px;
+        max-height: 28px;
+    }
+}
+
+.bottom-navbar-menu-toggle {
+    width: 28px;
+    height: 28px;
+    // border: 1px solid $light_brown;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    align-self: center;
+
+    .toggle-span {
+        border-bottom: 2px solid $white !important;
+    }
+}
+
+.bottom-navbar-menu {
+    display: none;
 }
