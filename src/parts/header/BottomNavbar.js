@@ -1,16 +1,21 @@
 import React from "react";
 import houseLogo from "./../../../src/img/herb-house.png";
 import searchLogo from "./../../../src/img/search.png";
+import closeLogo from "./../../../src/img/close.png";
 import cartLogo from "./../../../src/img/cart.png";
+import arrowClosedLogo from "./../../../src/img/arrow-closed.png";
+
 
 import $ from "jquery";
 class TopNavbar extends React.Component {
 
     componentDidMount() {
-        var open = false;
+        let open = false;
+        let searchModal = false;
         $('#bottom-navbar-toggle').click(function () {
             $('#bottom-navbar').slideToggle("fast")
         })
+
         $('.bottom-navbar-menu-toggle').click(function () {
             if (open === false) {
                 document.getElementsByClassName('toggle-span')[1].style.display = 'none';
@@ -51,6 +56,20 @@ class TopNavbar extends React.Component {
 
         })
 
+        $('.bottom-navbar-search-toggle').click(function () {
+            if (searchModal === false) {
+                $('.search-modal-wrapper').css("display", "flex")
+                $('.search-modal-wrapper').fadeIn()
+            } else {
+                $('.search-modal-wrapper').css("display", "none")
+                $('.search-modal-wrapper').fadeOut()
+            }
+        })
+        $('.search-modal-close').click(function () {
+            $('.search-modal-wrapper').css("display", "none")
+            $('.search-modal-wrapper').fadeOut("slow")
+        })
+
     }
 
 
@@ -65,18 +84,37 @@ class TopNavbar extends React.Component {
                             <div className="toggle-span"></div>
                             <div className="toggle-span"></div>
                         </div>
-                        <div><img src={searchLogo} alt="search icon" /></div>
+                        <div className="bottom-navbar-search-toggle"><img src={searchLogo} alt="search icon" /></div>
                         <div><img src={cartLogo} alt="cart icon" /></div>
                     </div>
-
                     <div className="bottom-navbar-menu">
                         <ul>
-                            <li>Home</li>
-                            <li>Our Shop</li>
-                            <li>Products</li>
-                            <li>Recipes</li>
+                            <li>
+                                <p>Home</p>
+                                <div><img className="arrow" src={arrowClosedLogo} alt="arrow icon" /></div>
+                            </li>
+                            <li>
+                                <p>Our Shop</p>
+                                <div><img className="arrow" src={arrowClosedLogo} alt="arrow icon" /></div>
+                            </li>
+                            <li>
+                                <p>Products</p>
+                                <div><img className="arrow" src={arrowClosedLogo} alt="arrow icon" /></div>
+                            </li>
+                            <li>
+                                <p>Recipes</p>
+                                <div><img className="arrow" src={arrowClosedLogo} alt="arrow icon" /></div>
+                            </li>
                         </ul>
                     </div>
+                </div>
+                <div className="search-modal-wrapper">
+                    <div className="search-modal-close"><img src={closeLogo} alt="close icon" /></div>
+                    <div className="search-modal-body">
+                        <input placeholder="ENTER KEYWORDS" />
+                        <button><img src={searchLogo} alt="search icon" /></button>
+                    </div>
+
                 </div>
             </>
         )
