@@ -76,9 +76,16 @@ a {
     }
 }
 
-.top-navbar-logo img {
+.top-navbar-logo {
     max-width: 100%;
-    min-width: 100%;
-    padding: 2px;
-    background-color: $light_green;
+    background-color: $bright_green;
+
+    img {
+        max-width: 90%;
+        min-width: 85%;
+        margin-right: 5%;
+        margin-left: 5%;
+        padding-top: .67rem;
+        padding-bottom: .67rem;
+    }
 }
