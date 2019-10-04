@@ -33,12 +33,17 @@ a {
 }
 
 .top-navbar-menu li,
-.bottom-navbar li {
+.bottom-navbar li,
+.bottom-navbar-panel {
     font-family: $font_roboto;
+    color: $white;
+}
+
+.top-navbar-menu li,
+.bottom-navbar li {
     text-transform: uppercase;
     font-weight: 600;
     line-height: 2rem;
-    color: $white;
 
 }
 
@@ -98,8 +103,8 @@ a {
     .bottom-navbar-menu {
         background-color: $light_brown;
         letter-spacing: .5pt;
-        padding: 0rem 1.1rem;
         font-size: .9rem;
+        padding: 0px;
 
         .arrow {
             height: 10px;
@@ -116,12 +121,26 @@ a {
         }
 
         li {
-            padding: 0.15rem 0;
+            // padding: 0rem 1.1rem;
+            padding: 0.15rem 1.1rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
+    }
+
+    .bottom-navbar-panel {
+        display: none;
+
+        // padding-left: 1.1rem;
+        div {
+            padding: .8rem 1.1rem .8rem 2.5rem;
+        }
+    }
+
+    .bottom-navbar-active {
+        background-color: $active_brown;
     }
 }
 

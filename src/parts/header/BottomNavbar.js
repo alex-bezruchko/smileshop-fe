@@ -12,6 +12,8 @@ class TopNavbar extends React.Component {
     componentDidMount() {
         let open = false;
         let searchModal = false;
+
+        // Bottom Menu Toggle
         $('#bottom-navbar-toggle').click(function () {
             $('#bottom-navbar').slideToggle("fast")
         })
@@ -56,6 +58,7 @@ class TopNavbar extends React.Component {
 
         })
 
+        // Bottom Menu Search Modal Toggle
         $('.bottom-navbar-search-toggle').click(function () {
             if (searchModal === false) {
                 $('.search-modal-wrapper').css("display", "flex")
@@ -65,13 +68,39 @@ class TopNavbar extends React.Component {
                 $('.search-modal-wrapper').fadeOut()
             }
         })
+
+        // Bottom Menu Search Modal Close
         $('.search-modal-close').click(function () {
             $('.search-modal-wrapper').css("display", "none")
             $('.search-modal-wrapper').fadeOut("slow")
         })
 
+
+        $('.bottom-navbar-panel').hide();
+
     }
 
+    // Select Tab
+    selectTab = (id) => {
+        const panels = document.getElementsByClassName('bottom-navbar-panel');
+        const tabs = document.getElementsByClassName('bottom-navbar-tab');
+
+        if (panels && panels[0]) {
+            for (let t = 0; t < tabs.length; t++) {
+                $(tabs[t]).removeClass('bottom-navbar-active')
+                if (id !== panels[t]) {
+                    $(panels[t]).slideUp("fast")
+                }
+            }
+            if (panels[id].style.display === "block") {
+                $(panels[id]).slideUp("fast")
+            } else {
+                $(tabs[id]).addClass('bottom-navbar-active')
+                $(panels[id]).slideToggle("fast")
+            }
+
+        }
+    }
 
     render() {
         return (
@@ -87,23 +116,47 @@ class TopNavbar extends React.Component {
                         <div className="bottom-navbar-search-toggle"><img src={searchLogo} alt="search icon" /></div>
                         <div><img src={cartLogo} alt="cart icon" /></div>
                     </div>
+
                     <div className="bottom-navbar-menu">
                         <ul>
-                            <li>
+                            <li onClick={() => this.selectTab(0)} className="bottom-navbar-tab">
                                 <p>Home</p>
-                                <div><img className="arrow" src={arrowClosedLogo} alt="arrow icon" /></div>
+                                <div>
+                                    <img className="arrow" src={arrowClosedLogo} alt="arrow icon" />
+                                </div>
                             </li>
-                            <li>
+                            <div className="bottom-navbar-panel">
+                                <div>About Us</div>
+                                <div>What we Offer</div>
+                                <div>Upcoming Events</div>
+                                <div>Latest News</div>
+                                <div>Contact</div>
+                            </div>
+
+                            <li onClick={() => this.selectTab(1)} className="bottom-navbar-tab">
                                 <p>Our Shop</p>
-                                <div><img className="arrow" src={arrowClosedLogo} alt="arrow icon" /></div>
+                                <div>
+                                    <img className="arrow" src={arrowClosedLogo} alt="arrow icon" />
+                                </div>
                             </li>
+                            <div className="bottom-navbar-panel">
+                                <div>Supplements</div>
+                                <div>Herbs</div>
+                                <div>Spices</div>
+                                <div>Books</div>
+                            </div>
+
                             <li>
                                 <p>Products</p>
-                                <div><img className="arrow" src={arrowClosedLogo} alt="arrow icon" /></div>
+                                <div>
+                                    <img className="arrow" src={arrowClosedLogo} alt="arrow icon" />
+                                </div>
                             </li>
                             <li>
                                 <p>Recipes</p>
-                                <div><img className="arrow" src={arrowClosedLogo} alt="arrow icon" /></div>
+                                <div>
+                                    <img className="arrow" src={arrowClosedLogo} alt="arrow icon" />
+                                </div>
                             </li>
                         </ul>
                     </div>
