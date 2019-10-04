@@ -1,0 +1,244 @@
+#top-navbar,
+#top-navbar a,
+#top-navbar-toggle {
+    background: $brown;
+    color: $white;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+#top-navbar {
+    display: none;
+    margin-bottom: -1px;
+
+    .company-offers {
+        font-family: $font_slab;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 15px;
+        padding-bottom: 15px;
+
+        a {
+            padding: .33rem 0rem;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        img {
+            max-height: 40px;
+            max-width: 40px;
+            align-self: center;
+            padding-right: .3rem;
+        }
+    }
+
+    .top-navbar-menu {
+        background-color: $light_brown;
+    }
+}
+
+.top-navbar-menu li,
+.bottom-navbar li,
+.bottom-navbar-panel {
+    font-family: $font_roboto;
+    color: $white;
+}
+
+.top-navbar-menu li,
+.bottom-navbar li {
+    text-transform: uppercase;
+    font-weight: 600;
+    line-height: 2rem;
+
+}
+
+.top-navbar-menu li {
+    font-size: .8rem;
+    padding: .2rem 0;
+}
+
+#top-navbar-toggle {
+    padding: .66rem 0px 0.5rem;
+    display: block;
+}
+
+.top-navbar-menu-toggle {
+    margin-left: auto;
+    margin-right: auto;
+    width: 40px;
+    height: 40px;
+    // border: 1px solid $light_brown;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    .toggle-span {
+        border-bottom: 2px solid $light_brown !important;
+    }
+}
+
+.top-navbar-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    ul {
+        padding: 0px;
+        margin: 0px;
+    }
+}
+
+.bottom-navbar {
+    max-width: 100%;
+    background-color: $bright_green;
+
+    img {
+        max-width: 90%;
+        min-width: 85%;
+        margin-right: 5%;
+        margin-left: 5%;
+        padding-top: .67rem;
+        padding-bottom: .67rem;
+    }
+
+    .bottom-navbar-menu {
+        background-color: $light_brown;
+        letter-spacing: .5pt;
+        font-size: .9rem;
+        padding: 0px;
+
+        .arrow {
+            height: 10px;
+            min-width: 10px;
+        }
+    }
+
+    ul {
+        width: 100%;
+        margin: .6rem 0;
+
+        p {
+            margin: 0px;
+        }
+
+        li {
+            // padding: 0rem 1.1rem;
+            padding: 0.15rem 1.1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+    }
+
+    .bottom-navbar-panel {
+        display: none;
+
+        // padding-left: 1.1rem;
+        div {
+            padding: .8rem 1.1rem .8rem 2.5rem;
+        }
+    }
+
+    .bottom-navbar-active {
+        background-color: $active_brown;
+    }
+}
+
+.bottom-navbar-actions {
+    display: flex;
+    justify-content: space-evenly;
+
+    img {
+        max-width: 28px;
+        max-height: 28px;
+    }
+}
+
+
+.bottom-navbar-menu-toggle {
+    width: 28px;
+    height: 28px;
+    // border: 1px solid $light_brown;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    align-self: center;
+
+    .toggle-span {
+        border-bottom: 2px solid $white !important;
+    }
+}
+
+.bottom-navbar-menu,
+.search-modal-wrapper {
+    display: none;
+}
+
+.search-modal-wrapper {
+    position: fixed;
+    // display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: $brown;
+    top: 0;
+    opacity: .99;
+
+    .search-modal-body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            max-width: 40px;
+            max-height: 40px
+        }
+    }
+
+    input {
+        border: none;
+        background: $brown;
+        font-family: $font_anton;
+        color: $bright_green;
+
+        &::placeholder {
+            color: $bright_green;
+            font-size: 1.1rem;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+
+
+    .search-modal-close {
+        color: $bright_green;
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 20px;
+        font-weight: bold;
+
+        img {
+            height: 15px;
+            width: 15px;
+        }
+
+    }
+}
