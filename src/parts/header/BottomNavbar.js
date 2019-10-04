@@ -85,7 +85,7 @@ class TopNavbar extends React.Component {
         const panels = document.getElementsByClassName('bottom-navbar-panel');
         const tabs = document.getElementsByClassName('bottom-navbar-tab');
 
-        if (panels && panels[0]) {
+        if (panels && panels[0] && tabs && tabs[0]) {
             for (let t = 0; t < tabs.length; t++) {
                 $(tabs[t]).removeClass('bottom-navbar-active')
                 if (id !== panels[t]) {
@@ -94,9 +94,12 @@ class TopNavbar extends React.Component {
             }
             if (panels[id].style.display === "block") {
                 $(panels[id]).slideUp("fast")
+                tabs[id].getElementsByTagName("img")[0].style.transform = "rotate(0deg)"
             } else {
                 $(tabs[id]).addClass('bottom-navbar-active')
                 $(panels[id]).slideToggle("fast")
+                tabs[id].getElementsByTagName("img")[0].style.transform = "rotate(90deg)"
+
             }
 
         }
