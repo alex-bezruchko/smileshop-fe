@@ -3,6 +3,7 @@ import houseLogo from "./../../../src/img/herb-house.png";
 import searchLogo from "./../../../src/img/search.png";
 import closeLogo from "./../../../src/img/close.png";
 import cartLogo from "./../../../src/img/cart.png";
+
 import arrowClosedLogo from "./../../../src/img/arrow-closed.png";
 
 

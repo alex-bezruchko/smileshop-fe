@@ -1,4 +1,7 @@
 import React from "react";
+import leafLogo from "./../../../src/img/leaf.png";
+import soupLogo from "./../../../src/img/soup.png";
+import truckLogo from "./../../../src/img/truck.png";
 
 import $ from "jquery";
 class TopNavbar extends React.Component {
@@ -69,9 +72,9 @@ class TopNavbar extends React.Component {
                         </ul>
                     </div>
                     <div className="company-offers">
-                        <a href="/">Try our meal boxes</a>
-                        <a href="/">100% organic</a>
-                        <a href="/">Free delivery</a>
+                        <a href="/"><img src={soupLogo} alt="soup" /> <p>Try our meal boxes</p></a>
+                        <a href="/"><img src={leafLogo} alt="leaf" /> <p>100% organic</p></a>
+                        <a href="/"><img src={truckLogo} alt="truck" /> <p>Free delivery</p></a>
                     </div>
                 </div>
                 <div id="top-navbar-toggle">^</div>

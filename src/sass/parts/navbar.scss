@@ -24,6 +24,15 @@ a {
 
         a {
             padding: .33rem 0rem;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        img {
+            max-height: 40px;
+            max-width: 40px;
+            align-self: center;
+            padding-right: .3rem;
         }
     }
 
