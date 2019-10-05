@@ -2,7 +2,6 @@ import React from "react";
 import leafLogo from "./../../../src/img/leaf.png";
 import soupLogo from "./../../../src/img/soup.png";
 import truckLogo from "./../../../src/img/truck.png";
-
 import $ from "jquery";
 class TopNavbar extends React.Component {
 
