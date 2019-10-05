@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 class Cart extends React.Component {
 
@@ -22,7 +23,11 @@ class Cart extends React.Component {
                         <>Cart Content</>
                         : <p>Your cart is currently empty.</p>
                     }
+                    <Link to={'/products'} className="btn-round btn-white">
+                        Return to Shop
+                </Link>
                 </div>
+
 
             </div>
         )
