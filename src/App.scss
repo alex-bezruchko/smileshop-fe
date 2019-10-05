@@ -1,7 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=Chelsea+Market|Roboto|Anton&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Encode+Sans|Chelsea+Market|Roboto|Anton&display=swap');
 
 @import "./sass/variables.scss";
+@import "./sass/buttons.scss";
 @import "./sass/parts/navbar.scss";
+@import "./sass/parts/cart.scss";
+
 
 ul {
     list-style: none;

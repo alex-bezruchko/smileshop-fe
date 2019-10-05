@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import houseLogo from "./../../../src/img/herb-house.png";
 import searchLogo from "./../../../src/img/search.png";
 import closeLogo from "./../../../src/img/close.png";
@@ -110,7 +111,7 @@ class TopNavbar extends React.Component {
         return (
             <>
                 <div className="bottom-navbar">
-                    <img src={houseLogo} alt="herb house" />
+                    <Link to={'/'}><img src={houseLogo} alt="herb house" /></Link>
                     <div className="bottom-navbar-actions">
                         <div className="bottom-navbar-menu-toggle">
                             <div className="toggle-span"></div>
@@ -118,7 +119,7 @@ class TopNavbar extends React.Component {
                             <div className="toggle-span"></div>
                         </div>
                         <div className="bottom-navbar-search-toggle"><img src={searchLogo} alt="search icon" /></div>
-                        <div><img src={cartLogo} alt="cart icon" /></div>
+                        <div><Link to={'/cart'}><img src={cartLogo} alt="cart icon" /></Link></div>
                     </div>
 
                     <div className="bottom-navbar-menu">

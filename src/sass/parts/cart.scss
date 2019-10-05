@@ -1,0 +1,46 @@
+.cart-wrapper {
+    .cart-header {
+        background-color: $beige;
+        text-align: center;
+        padding: 1rem 0rem;
+
+        p {
+            font-family: italic;
+            font-style: italic;
+        }
+    }
+
+    h1,
+    .cart-header p {
+        margin: 0;
+        color: $white;
+    }
+
+    h1 {
+        // padding-top: 1rem;
+        font-family: $font_anton;
+        color: $white;
+        font-size: 2.6rem;
+        // letter-spacing: 1pt;
+        font-weight: normal;
+        text-transform: uppercase;
+    }
+
+    .cart-content {
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+
+        p {
+            font-family: $font_sans;
+            font-size: 1rem;
+            color: $light_brown;
+        }
+
+        .btn-round {
+            margin-top: 20px;
+            align-self: end;
+        }
+    }
+}

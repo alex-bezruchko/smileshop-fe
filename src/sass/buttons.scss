@@ -1,0 +1,20 @@
+.btn-round {
+    border-radius: 33px;
+    min-width: 100px;
+    padding: 1rem 1.66rem;
+}
+
+.btn-white {
+    background-color: $white;
+    color: $brown;
+    border: 1px solid $beige;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: .9rem;
+    letter-spacing: -.33pt;
+
+    &:hover {
+        background-color: $bright_green;
+        color: $white;
+    }
+}
