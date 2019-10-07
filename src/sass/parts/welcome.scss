@@ -1,4 +1,4 @@
-.welcome-wrapper {
+.welcome-wrapper .header {
     padding: 5rem 0;
     background-repeat: no-repeat;
 
@@ -17,5 +17,46 @@
 
     h2 {
         font-size: 1.3rem;
+    }
+}
+
+.welcome-wrapper .search-wrapper {
+    display: flex;
+    margin: 1.1rem;
+    border: 1px solid $beige;
+    padding-right: .5rem;
+    padding-left: .5rem;
+    color: $beige;
+
+    input {
+        border: none;
+        width: 100%;
+        padding: 1rem .3rem;
+        color: $brown;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    input,
+    input::placeholder {
+        font-family: $font_crimson;
+        font-size: 1.3rem;
+    }
+
+    input::placeholder {
+        color: $active_brown;
+
+    }
+
+    button {
+        width: 30px;
+
+        svg {
+            font-size: 20px;
+            fill: $active_brown;
+            // margin-right: 10px;
+        }
     }
 }
