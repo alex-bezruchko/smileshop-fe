@@ -1,0 +1,21 @@
+.welcome-wrapper {
+    padding: 5rem 0;
+    background-repeat: no-repeat;
+
+    h1,
+    h2 {
+        z-index: 9999;
+        text-align: center;
+        color: $white;
+    }
+
+    h1 {
+        font-size: 3.3rem;
+        text-transform: uppercase;
+        margin: 0px;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+}

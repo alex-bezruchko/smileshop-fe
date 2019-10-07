@@ -2,6 +2,7 @@
 
 @import "./sass/variables.scss";
 @import "./sass/buttons.scss";
+@import "./sass/parts/welcome.scss";
 @import "./sass/parts/footer.scss";
 @import "./sass/parts/navbar.scss";
 @import "./sass/parts/cart.scss";
@@ -11,4 +12,12 @@ ul {
     list-style: none;
     padding-left: 0px;
     margin-left: 0px;
+}
+
+.slab {
+    font-family: $font_slab;
+}
+
+.anton {
+    font-family: $font_anton;
 }
