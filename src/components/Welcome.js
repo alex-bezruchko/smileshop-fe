@@ -6,7 +6,7 @@ class Welcome extends React.Component {
     componentDidMount() {
         const welcomeDiv = document.getElementsByClassName('header')[0];
         console.log(welcomeDiv)
-        welcomeDiv.style.backgroundImage = `url(${welcomeLogo})`
+        // welcomeDiv.style.backgroundImage = `url(${welcomeLogo})`
     }
     render() {
         return (
@@ -15,6 +15,7 @@ class Welcome extends React.Component {
                     <h1 className="anton">Our Products</h1>
                     <h2 className="slab">Organic supplements grown with love and care</h2>
                 </div>
+
                 {/* <img src={welcomeLogo} alt="welcome" className="welcome-img" /> */}
                 <SearchForm />
 
