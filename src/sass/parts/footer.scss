@@ -9,7 +9,7 @@ footer {
     }
 }
 
-.footer-header {
+footer .logo {
     padding-top: 2.3rem;
     padding-bottom: 2.3rem;
 
@@ -25,7 +25,7 @@ footer {
     }
 }
 
-.footer-content {
+footer .container {
     .column {
         padding-top: 1.6rem;
     }
@@ -103,5 +103,24 @@ footer {
 
     svg {
         fill: $white;
+    }
+}
+
+@media #{$desktop} {
+    footer .container {
+        display: flex;
+        flex-direction: row;
+
+        .logo {
+            img {
+                width: 200px;
+            }
+        }
+    }
+
+    .column {
+        width: 22%;
+        padding-right: 1.5rem;
+
     }
 }
