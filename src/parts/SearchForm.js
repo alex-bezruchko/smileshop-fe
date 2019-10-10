@@ -1,5 +1,4 @@
 import React from "react";
-import searchLogo from "./../img/search.png";
 import { FaSearch } from "react-icons/fa"
 
 class SearchForm extends React.Component {

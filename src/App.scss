@@ -14,12 +14,20 @@ ul {
     margin-left: 0px;
 }
 
+a {
+    color: black;
+}
+
 .slab {
     font-family: $font_slab;
 }
 
 .anton {
     font-family: $font_anton;
+}
+
+.crimson {
+    font-family: $font_crimson;
 }
 
 @media #{$desktop} {

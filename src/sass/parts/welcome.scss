@@ -22,9 +22,9 @@
     }
 }
 
-.welcome-wrapper .search-wrapper {
+.search-wrapper {
     display: flex;
-    margin: 1.1rem;
+    margin: 1.1rem 0;
     border: 1px solid $beige;
     padding-right: .5rem;
     padding-left: .5rem;
@@ -55,6 +55,8 @@
 
     button {
         width: 30px;
+        border: none;
+        background: none;
 
         svg {
             font-size: 20px;
@@ -64,10 +66,49 @@
     }
 }
 
+.content-wrapper {
+    aside {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    aside h3 {
+        margin: 2rem 0;
+    }
+
+    aside li {
+        border-bottom: 1px solid $beige;
+    }
+
+    aside li a {
+        display: flex;
+        padding: .5rem .3rem;
+        text-transform: capitalize;
+        color: $brown;
+        font-style: italic;
+
+        svg {
+            align-self: center;
+            margin-right: 8px;
+        }
+    }
+}
+
+
 @media #{$desktop} {
     .welcome-wrapper .header {
         background-attachment: fixed;
         background-size: cover;
+    }
 
+    .content-wrapper {
+        aside {
+            width: 25%;
+        }
+    }
+
+    .search-wrapper {
+        padding-left: 0;
+        margin-left: 0;
     }
 }
