@@ -1,6 +1,8 @@
 .welcome-wrapper .header {
     padding: 5rem 0;
+
     background-repeat: no-repeat;
+    background-image: url('./../../img/welcome.png');
 
     h1,
     h2 {
@@ -27,6 +29,7 @@
     padding-right: .5rem;
     padding-left: .5rem;
     color: $beige;
+
 
     input {
         border: none;
@@ -58,5 +61,13 @@
             fill: $active_brown;
             // margin-right: 10px;
         }
+    }
+}
+
+@media #{$desktop} {
+    .welcome-wrapper .header {
+        background-attachment: fixed;
+        background-size: cover;
+
     }
 }

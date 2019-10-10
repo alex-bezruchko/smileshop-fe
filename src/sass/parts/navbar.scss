@@ -1,7 +1,14 @@
 #top-navbar,
-#top-navbar a,
 #top-navbar-toggle {
     background: $brown;
+    color: $white;
+    text-align: center;
+}
+
+#top-navbar,
+.top-navbar-menu a,
+.company-offers a,
+#top-navbar-toggle {
     color: $white;
     text-align: center;
 }
@@ -241,4 +248,85 @@ a {
         }
 
     }
+}
+
+@media #{$desktop} {
+
+    #top-navbar,
+    #top-navbar .company-offers,
+    .top-navbar-menu,
+    .top-navbar-menu ul {
+        display: flex;
+    }
+
+    #top-navbar {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        padding: .25rem 1rem;
+        margin-bottom: 0;
+
+        .company-offers {
+            flex-direction: row;
+            padding-top: 0;
+            padding-bottom: 0;
+
+            p {
+                margin: 0;
+            }
+
+            a {
+                font-size: .8rem;
+                margin-right: 20px;
+            }
+        }
+
+        .top-navbar-menu {
+            min-width: 50%;
+        }
+
+        ul {
+            flex-direction: row;
+            justify-content: flex-end;
+            min-width: 100%;
+            background-color: $brown;
+            height: 100%;
+        }
+    }
+
+    #top-navbar .company-offers {
+
+        a,
+        p {
+            padding: 0;
+            align-self: center;
+        }
+
+        img {
+            max-width: 33px;
+            max-width: 33px;
+            padding-left: 10px;
+        }
+    }
+
+
+    .top-navbar-menu li {
+        padding-right: 1rem;
+        font-size: .67rem;
+        letter-spacing: .67pt;
+        display: flex;
+
+        a {
+            align-self: center;
+            border-right: 1px solid $beige;
+            padding-right: .67rem;
+            line-height: 1.1;
+            color: $beige;
+        }
+    }
+
+    .top-navbar-menu-toggle,
+    #top-navbar-toggle {
+        display: none;
+    }
+
 }

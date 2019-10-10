@@ -7,11 +7,11 @@ import phone from "./../img/phone.png";
 const Footer = () => {
     return (
         <footer>
-            <div className="footer-header">
-                <img src={logo} alt="logo" />
-                <p>By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out.</p>
-            </div>
-            <div className="footer-content">
+            <div className="container">
+                <div className="column logo">
+                    <img src={logo} alt="logo" />
+                    <p>By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out.</p>
+                </div>
                 <div className="column">
                     <h2>Links</h2>
                     <ul>
@@ -41,7 +41,7 @@ const Footer = () => {
                 </div>
 
             </div>
-        </footer>
+        </footer >
     )
 }
 
