@@ -64,10 +64,10 @@ class TopNavbar extends React.Component {
                     </div>
                     <div className="top-navbar-menu">
                         <ul>
-                            <li>About Us</li>
-                            <li>Help</li>
-                            <li>Your Account</li>
-                            <li>Your Basket</li>
+                            <li><a href="">About Us</a></li>
+                            <li><a href="">Help</a></li>
+                            <li><a href="">Your Account</a></li>
+                            <li><a href="">Your Basket</a></li>
                         </ul>
                     </div>
                     <div className="company-offers">
