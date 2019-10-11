@@ -22,9 +22,9 @@
     }
 }
 
-.welcome-wrapper .search-wrapper {
+.search-wrapper {
     display: flex;
-    margin: 1.1rem;
+    margin: 0;
     border: 1px solid $beige;
     padding-right: .5rem;
     padding-left: .5rem;
@@ -55,6 +55,8 @@
 
     button {
         width: 30px;
+        border: none;
+        background: none;
 
         svg {
             font-size: 20px;
@@ -64,10 +66,130 @@
     }
 }
 
+.content-wrapper {
+
+    aside {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    aside h3 {
+        margin: 2rem 0;
+    }
+
+    aside li {
+        border-bottom: 1px solid $beige;
+    }
+
+    aside li a {
+        display: flex;
+        padding: .5rem .3rem;
+        text-transform: capitalize;
+        color: $brown;
+        font-style: italic;
+
+        svg {
+            align-self: center;
+            margin-right: 8px;
+        }
+    }
+
+    .products {
+        h2 {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+    }
+
+    .products .promoted {
+        display: flex;
+        flex-direction: column-reverse;
+        flex-wrap: nowrap;
+        // margin-top: 4rem;
+
+        .column {
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 400px;
+            width: 80%;
+            margin-bottom: 2rem;
+        }
+
+        p {
+            font-style: italic;
+            text-transform: capitalize;
+        }
+
+        p,
+        h2,
+        h3 {
+            text-align: center;
+        }
+
+        img {
+            max-width: 100%;
+            min-height: 250px;
+            max-height: 250px;
+        }
+    }
+}
+
+
 @media #{$desktop} {
     .welcome-wrapper .header {
         background-attachment: fixed;
         background-size: cover;
+    }
 
+    .content-wrapper .container {
+        margin-top: 4rem;
+        display: flex;
+        flex-direction: row;
+
+        aside {
+            width: 23%;
+            padding-right: 2rem;
+        }
+
+        .products {
+            width: 75%;
+        }
+
+        .products .promoted {
+
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+    }
+
+    .content-wrapper .products .promoted .column {
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+        justify-content: center;
+        margin-bottom: 2rem;
+        padding-right: 0;
+
+        img {
+            max-height: 200px;
+            min-height: 200px;
+        }
+
+        p {
+            margin-top: 1rem;
+        }
+
+        h3 {
+            margin: .3rem 0;
+        }
+
+        .price {
+            font-size: 1.2rem;
+        }
+    }
+
+    .search-wrapper {
+        padding-left: 0;
+        margin-left: 0;
     }
 }
