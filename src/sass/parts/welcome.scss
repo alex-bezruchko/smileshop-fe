@@ -24,7 +24,7 @@
 
 .search-wrapper {
     display: flex;
-    margin: 1.1rem 0;
+    margin: 0;
     border: 1px solid $beige;
     padding-right: .5rem;
     padding-left: .5rem;
@@ -67,6 +67,7 @@
 }
 
 .content-wrapper {
+
     aside {
         padding-left: 1rem;
         padding-right: 1rem;
@@ -92,6 +93,45 @@
             margin-right: 8px;
         }
     }
+
+    .products {
+        h2 {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+    }
+
+    .products .promoted {
+        display: flex;
+        flex-direction: column-reverse;
+        flex-wrap: nowrap;
+        // margin-top: 4rem;
+
+        .column {
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 400px;
+            width: 80%;
+            margin-bottom: 2rem;
+        }
+
+        p {
+            font-style: italic;
+            text-transform: capitalize;
+        }
+
+        p,
+        h2,
+        h3 {
+            text-align: center;
+        }
+
+        img {
+            max-width: 100%;
+            min-height: 250px;
+            max-height: 250px;
+        }
+    }
 }
 
 
@@ -101,9 +141,50 @@
         background-size: cover;
     }
 
-    .content-wrapper {
+    .content-wrapper .container {
+        margin-top: 4rem;
+        display: flex;
+        flex-direction: row;
+
         aside {
-            width: 25%;
+            width: 23%;
+            padding-right: 2rem;
+        }
+
+        .products {
+            width: 75%;
+        }
+
+        .products .promoted {
+
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+    }
+
+    .content-wrapper .products .promoted .column {
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+        justify-content: center;
+        margin-bottom: 2rem;
+        padding-right: 0;
+
+        img {
+            max-height: 200px;
+            min-height: 200px;
+        }
+
+        p {
+            margin-top: 1rem;
+        }
+
+        h3 {
+            margin: .3rem 0;
+        }
+
+        .price {
+            font-size: 1.2rem;
         }
     }
 
