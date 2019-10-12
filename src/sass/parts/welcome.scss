@@ -136,6 +136,22 @@
 
 
 @media #{$desktop} {
+    .carousel-wrapper {
+        img {
+            max-height: 400px;
+            height: 400px;
+            width: 50%;
+        }
+
+        .d-md-block {
+            width: 50%;
+            margin-left: 50%;
+            position: absolute;
+            right: 0;
+            left: 0;
+        }
+    }
+
     .welcome-wrapper .header {
         background-attachment: fixed;
         background-size: cover;
