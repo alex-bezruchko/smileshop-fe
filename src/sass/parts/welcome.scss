@@ -290,4 +290,42 @@
         }
     }
 
+    .subscribe-wrapper {
+        background: url('./../../img/subscribe.png');
+        background-size: cover;
+        min-height: 333px;
+        display: flex;
+    }
+
+    .subscribe-wrapper .container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        h2 {
+            color: #92B92B;
+            padding-bottom: 1rem;
+        }
+
+        .info {
+            padding-right: 1rem;
+        }
+
+        .info,
+        .form {
+            width: 50%;
+        }
+
+        input {
+            border: 1px solid $active_brown;
+            padding: .6rem;
+            width: 80%;
+        }
+
+        button {
+            border: none;
+            background: none;
+            margin-left: -2rem;
+        }
+    }
 }
