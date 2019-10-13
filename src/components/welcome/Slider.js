@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import loading from "./../img/loading.png"
-import slidesData from "./../data/slides.js";
+import loading from "./../../img/loading.png"
+import slidesData from "../../data/slides.js";
 // let slides = slidesData.slides;
 // const slides = require("./../data/slides").slides;
 import {
@@ -12,7 +12,7 @@ import {
     CarouselCaption,
 } from "reactstrap";
 
-class WelcomeCarousel extends React.Component {
+class Slider extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -131,4 +131,4 @@ class WelcomeCarousel extends React.Component {
     }
 }
 
-export default WelcomeCarousel;
+export default Slider;

@@ -1,8 +1,9 @@
 import React from "react";
 import { FaRegFolder } from "react-icons/fa"
 import axios from "axios";
-import SearchForm from "./../parts/SearchForm";
-class Welcome extends React.Component {
+import SearchForm from "./../../parts/SearchForm";
+
+class Header extends React.Component {
 
     constructor(props) {
         super(props);
@@ -107,4 +108,4 @@ class Welcome extends React.Component {
     }
 }
 
-export default Welcome
+export default Header
