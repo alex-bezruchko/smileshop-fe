@@ -322,6 +322,11 @@
             width: 80%;
         }
 
+        input:focus,
+        button:focus {
+            outline: none;
+        }
+
         button {
             border: none;
             background: none;
