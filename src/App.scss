@@ -22,6 +22,13 @@ a {
     }
 }
 
+h1,
+h2,
+h3,
+p {
+    cursor: default;
+}
+
 .slab {
     font-family: $font_slab;
 }
@@ -32,6 +39,10 @@ a {
 
 .crimson {
     font-family: $font_crimson;
+}
+
+.sans {
+    font-family: $font_sans;
 }
 
 @media #{$desktop} {

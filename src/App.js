@@ -2,11 +2,12 @@ import React from 'react';
 import { Route } from "react-router-dom";
 import Cart from "./parts/cart";
 import Header from "./parts/header/Header";
-import WelcomeCarousel from "./components/WelcomeCarousel";
 
 import Footer from "./parts/Footer";
 import Copyright from "./parts/Copyright";
-import Welcome from "./components/Welcome";
+import Welcome from "./components/welcome/Welcome";
+import Products from "./components/products/Products";
+
 
 
 import './App.scss';
@@ -16,8 +17,9 @@ function App() {
     <div className="App">
       <Header />
       <Route exact path="/cart" component={Cart} />
-      <Route exact path="/" component={WelcomeCarousel} />
-      <Route exact path="/products" component={Welcome} />
+      <Route exact path="/products" component={Products} />
+      <Route exact path="/" component={Welcome} />
+
 
       <Footer />
       <Copyright />
