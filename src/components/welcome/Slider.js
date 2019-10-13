@@ -79,8 +79,8 @@ class Slider extends React.Component {
                             <img src={slide.img} alt="title" />
                         </div>
                         <CarouselCaption
-                            captionText={slide.title}
                             captionHeader={slide.summary}
+                            captionText={slide.title}
                         />
                     </Link>
                 </CarouselItem>
