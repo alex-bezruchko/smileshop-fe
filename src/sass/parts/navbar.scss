@@ -1,3 +1,5 @@
+@import "./sass/parts/bottom-navbar.scss";
+
 #top-navbar,
 #top-navbar-toggle {
     background: $brown;
@@ -49,14 +51,14 @@ a {
 }
 
 .top-navbar-menu li,
-.bottom-navbar li,
+.bottom-navbar-wrapperli,
 .bottom-navbar-panel {
     font-family: $font_roboto;
     color: $white;
 }
 
 .top-navbar-menu li,
-.bottom-navbar li {
+.bottom-navbar-wrapperli {
     text-transform: uppercase;
     font-weight: 600;
     line-height: 2rem;
@@ -103,96 +105,14 @@ a {
     }
 }
 
-.bottom-navbar {
-    max-width: 100%;
-    background-color: $bright_green;
 
-    img {
-        max-width: 90%;
-        min-width: 85%;
-        margin-right: 5%;
-        margin-left: 5%;
-        padding-top: .67rem;
-        padding-bottom: .67rem;
-    }
-
-    .bottom-navbar-menu {
-        background-color: $light_brown;
-        letter-spacing: .5pt;
-        font-size: .9rem;
-        padding: 0px;
-
-        .arrow {
-            height: 10px;
-            min-width: 10px;
-        }
-    }
-
-    ul {
-        width: 100%;
-        margin: .6rem 0;
-
-        p {
-            margin: 0px;
-        }
-
-        li {
-            // padding: 0rem 1.1rem;
-            padding: 0.15rem 1.1rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-    }
-
-    .bottom-navbar-panel {
-        display: none;
-
-        // padding-left: 1.1rem;
-        div {
-            padding: .8rem 1.1rem .8rem 2.5rem;
-        }
-    }
-
-    .bottom-navbar-active {
-        background-color: $active_brown;
-    }
-}
-
-.bottom-navbar-actions {
-    display: flex;
-    justify-content: space-evenly;
-
-    img {
-        max-width: 28px;
-        max-height: 28px;
-    }
-}
-
-
-.bottom-navbar-menu-toggle {
-    width: 28px;
-    height: 28px;
-    // border: 1px solid $light_brown;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    padding-left: 3px;
-    padding-right: 3px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    align-self: center;
-
-    .toggle-span {
-        border-bottom: 2px solid $white !important;
-    }
-}
 
 .bottom-navbar-menu,
 .search-modal-wrapper {
     display: none;
 }
+
+
 
 .search-modal-wrapper {
     position: fixed;
@@ -325,8 +245,17 @@ a {
     }
 
     .top-navbar-menu-toggle,
-    #top-navbar-toggle {
+    #top-navbar-toggle,
+    .bottom-navbar-menu-toggle {
         display: none;
     }
+
+
+    .nav-link {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+
 
 }

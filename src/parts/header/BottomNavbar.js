@@ -1,4 +1,20 @@
-import React from "react";
+// import React from "react";
+import React, { useState } from 'react';
+
+import {
+    Collapse,
+    Navbar,
+    NavbarToggler,
+    NavbarBrand,
+    Nav,
+    NavItem,
+    NavLink,
+    UncontrolledDropdown,
+    DropdownToggle,
+    DropdownMenu,
+    DropdownItem
+} from 'reactstrap';
+
 import { Link } from "react-router-dom";
 import houseLogo from "./../../../src/img/herb-house.png";
 import searchLogo from "./../../../src/img/search.png";
@@ -10,7 +26,19 @@ import arrowClosedLogo from "./../../../src/img/arrow-closed.png";
 
 import $ from "jquery";
 class TopNavbar extends React.Component {
+    constructor(props) {
+        super(props);
+        this.setState = {
+            isOpen: false
+        }
+    }
+    // const toggle = () => setIsOpen(!isOpen);
+    toggle = () => {
+        this.setState({
+            isOpen: !this.state.isOpen
+        })
 
+    }
     componentDidMount() {
         let open = false;
         let searchModal = false;
@@ -83,89 +111,84 @@ class TopNavbar extends React.Component {
     }
 
     // Select Tab
-    selectTab = (id) => {
-        const panels = document.getElementsByClassName('bottom-navbar-panel');
-        const tabs = document.getElementsByClassName('bottom-navbar-tab');
 
-        if (panels && panels[0] && tabs && tabs[0]) {
-            for (let t = 0; t < tabs.length; t++) {
-                $(tabs[t]).removeClass('bottom-navbar-active')
-                if (id !== panels[t]) {
-                    $(panels[t]).slideUp("fast")
-                }
-            }
-            if (panels[id].style.display === "block") {
-                $(panels[id]).slideUp("fast")
-                tabs[id].getElementsByTagName("img")[0].style.transform = "rotate(0deg)"
-            } else {
-                $(tabs[id]).addClass('bottom-navbar-active')
-                $(panels[id]).slideToggle("fast")
-                tabs[id].getElementsByTagName("img")[0].style.transform = "rotate(90deg)"
-
-            }
-
-        }
-    }
 
     render() {
         return (
             <>
-                <div className="bottom-navbar">
-                    <Link to={'/'}><img src={houseLogo} alt="herb house" /></Link>
-                    <div className="bottom-navbar-actions">
-                        <div className="bottom-navbar-menu-toggle">
-                            <div className="toggle-span"></div>
-                            <div className="toggle-span"></div>
-                            <div className="toggle-span"></div>
+                <div className="bottom-navbar-wrapper">
+                    <div className="container">
+                        <Link className="home-link" to={'/'}>
+                            <img src={houseLogo} alt="herb house" />
+                        </Link>
+
+                        <div className="bottom-navbar">
+                            <div className="bottom-navbar-actions">
+                                <div className="bottom-navbar-menu-toggle">
+                                    <div className="toggle-span"></div>
+                                    <div className="toggle-span"></div>
+                                    <div className="toggle-span"></div>
+                                </div>
+                                <div className="bottom-navbar-search-toggle"><img src={searchLogo} alt="search icon" /></div>
+                                <div><Link to={'/cart'}><img src={cartLogo} alt="cart icon" /></Link></div>
+                            </div>
+
+                            <div className="bottom-navbar-menu">
+
+                                <UncontrolledDropdown nav inNavbar>
+                                    <DropdownToggle nav caret>
+                                        Home
+                                            </DropdownToggle>
+                                    <DropdownMenu up>
+                                        <DropdownItem>
+                                            <div>About Us</div>
+                                        </DropdownItem>
+                                        <DropdownItem>
+                                            <div>What we Offer</div>
+                                        </DropdownItem>
+                                        <DropdownItem>
+                                            <div>Upcoming Events</div>
+                                        </DropdownItem>
+                                        <DropdownItem>
+                                            <div>Latest News</div>
+                                        </DropdownItem>
+
+                                        <DropdownItem>
+                                            <div>Contact</div>
+                                        </DropdownItem>
+                                    </DropdownMenu>
+
+
+                                </UncontrolledDropdown>
+
+                                <UncontrolledDropdown nav inNavbar>
+                                    <DropdownToggle nav caret>
+                                        Products
+                                            </DropdownToggle>
+                                    <DropdownMenu right>
+                                        <DropdownItem>
+                                            <div>Supplements</div>
+                                        </DropdownItem>
+                                        <DropdownItem>
+                                            <div>Herbs</div>
+                                        </DropdownItem>
+                                        <DropdownItem>
+                                            <div>Spices</div>
+                                        </DropdownItem>
+                                        <DropdownItem>
+                                            <div>Books</div>
+                                        </DropdownItem>
+
+                                    </DropdownMenu>
+                                </UncontrolledDropdown>
+
+                            </div>
+
                         </div>
-                        <div className="bottom-navbar-search-toggle"><img src={searchLogo} alt="search icon" /></div>
-                        <div><Link to={'/cart'}><img src={cartLogo} alt="cart icon" /></Link></div>
-                    </div>
-
-                    <div className="bottom-navbar-menu">
-                        <ul>
-                            <li onClick={() => this.selectTab(0)} className="bottom-navbar-tab">
-                                <p>Home</p>
-                                <div>
-                                    <img className="arrow" src={arrowClosedLogo} alt="arrow icon" />
-                                </div>
-                            </li>
-                            <div className="bottom-navbar-panel">
-                                <div>About Us</div>
-                                <div>What we Offer</div>
-                                <div>Upcoming Events</div>
-                                <div>Latest News</div>
-                                <div>Contact</div>
-                            </div>
-
-                            <li onClick={() => this.selectTab(1)} className="bottom-navbar-tab">
-                                <p>Our Shop</p>
-                                <div>
-                                    <img className="arrow" src={arrowClosedLogo} alt="arrow icon" />
-                                </div>
-                            </li>
-                            <div className="bottom-navbar-panel">
-                                <div>Supplements</div>
-                                <div>Herbs</div>
-                                <div>Spices</div>
-                                <div>Books</div>
-                            </div>
-
-                            <li>
-                                <p>Products</p>
-                                <div>
-                                    <img className="arrow" src={arrowClosedLogo} alt="arrow icon" />
-                                </div>
-                            </li>
-                            <li>
-                                <p>Recipes</p>
-                                <div>
-                                    <img className="arrow" src={arrowClosedLogo} alt="arrow icon" />
-                                </div>
-                            </li>
-                        </ul>
                     </div>
                 </div>
+
+
                 <div className="search-modal-wrapper">
                     <div className="search-modal-close"><img src={closeLogo} alt="close icon" /></div>
                     <div className="search-modal-body">
