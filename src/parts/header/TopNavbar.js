@@ -71,9 +71,9 @@ class TopNavbar extends React.Component {
                         </ul>
                     </div>
                     <div className="company-offers">
-                        <a href="/"><img src={soupLogo} alt="soup" /> <p>Try our meal boxes</p></a>
-                        <a href="/"><img src={leafLogo} alt="leaf" /> <p>100% organic</p></a>
-                        <a href="/"><img src={truckLogo} alt="truck" /> <p>Free delivery</p></a>
+                        <a href="/"><img src={soupLogo} alt="soup" /> Try our meal boxes</a>
+                        <a href="/"><img src={leafLogo} alt="leaf" /> 100% organic</a>
+                        <a href="/"><img src={truckLogo} alt="truck" /> Free delivery</a>
                     </div>
                 </div>
                 <div id="top-navbar-toggle">^</div>

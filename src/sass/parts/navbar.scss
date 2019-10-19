@@ -11,7 +11,7 @@
 .top-navbar-menu a,
 .company-offers a,
 #top-navbar-toggle {
-    color: $white;
+    color: $white !important;
     text-align: center;
 }
 
@@ -180,6 +180,7 @@ a {
     }
 
     #top-navbar {
+
         flex-direction: row-reverse;
         justify-content: space-between;
         padding: .25rem 1rem;
@@ -240,7 +241,11 @@ a {
             border-right: 1px solid $beige;
             padding-right: .67rem;
             line-height: 1.1;
-            color: $beige;
+            color: $beige !important;
+        }
+
+        a:last-child {
+            border-right: none;
         }
     }
 
